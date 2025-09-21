@@ -4,7 +4,7 @@ import pandas as pd
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent
-DB_PATH = BASE_DIR / "database" / "fruitsAndVegetables.db"
+DB_PATH = "../database/fruitsAndVegetables.db"
 
 
 def get_food_date():
