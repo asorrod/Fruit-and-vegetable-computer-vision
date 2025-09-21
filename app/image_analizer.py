@@ -4,9 +4,11 @@ import os
 from ultralytics import YOLO
 from collections import Counter
 import sqlite3 as sql
+from pathlib import Path
 
-MODEL_PATH = "../models/best.pt"
-DB_PATH = "../database/fruitsAndVegetables.db"
+BASE_DIR = Path(__file__).parent
+MODEL_PATH = BASE_DIR / "models" / "best.pt"
+DB_PATH = BASE_DIR / "database" / "fruitsAndVegetables.db"
 
 
 @st.cache_data

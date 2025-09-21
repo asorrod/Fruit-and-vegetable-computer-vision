@@ -1,11 +1,13 @@
+from pathlib import Path
 import streamlit as st
 import pandas as pd
 from PIL import Image
 from image_analizer import image_analizer
 from calories import display_data
 
-IMAGES_PATH = "assets/images"
-APP_ICON = Image.open(IMAGES_PATH + "/banana_icon.png")
+BASE_DIR = Path(__file__).parent
+IMAGES_PATH = BASE_DIR / "assets" / "images" / "banana_icon.png"
+APP_ICON = Image.open(IMAGES_PATH)
 
 st.set_page_config(page_title = "Calory Database", page_icon= APP_ICON, 
                    initial_sidebar_state="collapsed")

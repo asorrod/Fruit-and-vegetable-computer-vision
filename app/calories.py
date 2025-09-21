@@ -1,10 +1,11 @@
 import streamlit as st
 import sqlite3 as sql
 import pandas as pd
+from pathlib import Path
 
+BASE_DIR = Path(__file__).parent
+DB_PATH = BASE_DIR / "database" / "fruitsAndVegetables.db"
 
-DB_PATH = "../database/fruitsAndVegetables.db"
-CSV_PATH = "./data/csv/"
 
 def get_food_date():
     
