@@ -25,7 +25,7 @@ def save_file(uploadedFile):
 
 def process_image(img):
     model = YOLO(MODEL_PATH)
-    results = model.predict(source="./temp/" + img.name, conf=0.25, device=0)
+    results = model.predict(source="./temp/" + img.name, conf=0.25, device="cpu")
     detected_classes = []
 
     if len(results[0].boxes) > 0:
