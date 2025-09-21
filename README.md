@@ -27,6 +27,7 @@ We cleaned the dataset using the dataset_cleaner script to keep only the relevan
 
 ## Results 
 After retraining with the reduced dataset, the model achieved significantly better performance (still with room for improvement):
+
 Class     Images  Instances      Box(P     R     mAP50   mAP50-95)
 all        107        793        0.515   0.573   0.540    0.345
 
