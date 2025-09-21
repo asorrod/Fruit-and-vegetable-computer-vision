@@ -43,3 +43,13 @@ Once the model was trained, we developed a small Streamlit app as a practical us
   - The app keeps track of what the user has eaten during the day and displays daily calorie consumption.
 
 This way, the project not only demonstrates computer vision with YOLO, but also integrates it into a realistic nutritional tracking tool.
+
+## How to use
+
+Install the dependencies from requirements.txt
+
+If you only want to execute it locally, in the app directory execute "python -m streamlit run app.py"
+
+On the other hand if you want to train with the cropped dataset, donwload it from "https://github.com/henningheyen/Fruits-And-Vegetables-Detection-Dataset" and run the dataset_cleaner script.
+
+Otherwise you can view the app from this link: https://calorydatabase.streamlit.app/
