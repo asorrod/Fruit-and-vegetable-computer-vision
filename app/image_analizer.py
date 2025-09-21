@@ -5,6 +5,7 @@ from ultralytics import YOLO
 from collections import Counter
 import sqlite3 as sql
 from pathlib import Path
+import torch
 
 BASE_DIR = Path(__file__).parent.parent
 MODEL_PATH = BASE_DIR / "models" / "best.pt"
@@ -25,7 +26,9 @@ def save_file(uploadedFile):
 
 def process_image(img):
     model = YOLO(MODEL_PATH)
-    results = model.predict(source="./temp/" + img.name, conf=0.25, device="cpu")
+
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    results = model.predict(source="./temp/" + img.name, conf=0.25, device=device)
     detected_classes = []
 
     if len(results[0].boxes) > 0:
