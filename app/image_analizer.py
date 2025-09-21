@@ -6,7 +6,7 @@ from collections import Counter
 import sqlite3 as sql
 from pathlib import Path
 
-BASE_DIR = Path(__file__).parent
+BASE_DIR = Path(__file__).parent.parent
 MODEL_PATH = BASE_DIR / "models" / "best.pt"
 DB_PATH = BASE_DIR / "database" / "fruitsAndVegetables.db"
 

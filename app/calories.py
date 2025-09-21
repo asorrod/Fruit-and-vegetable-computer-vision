@@ -3,14 +3,14 @@ import sqlite3 as sql
 import pandas as pd
 from pathlib import Path
 
-BASE_DIR = Path(__file__).parent
-DB_PATH = "../database/fruitsAndVegetables.db"
+BASE_DIR = Path(__file__).parent.parent
+DB_PATH = BASE_DIR / "database" / "fruitsAndVegetables.db"
 
 
 def get_food_date():
     
     day = st.date_input("Choose a day")
-
+    
     conn = sql.connect(DB_PATH)
     cursor = conn.cursor()
 
