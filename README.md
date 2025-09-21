@@ -48,7 +48,7 @@ This way, the project not only demonstrates computer vision with YOLO, but also 
 
 Install the dependencies from requirements.txt
 
-If you only want to execute it locally, in the app directory execute "python -m streamlit run app.py"
+If you only want to execute it locally, in the app directory execute "python -m streamlit run app.py" and try some of the images from the folder "meals_image" or try uploading your own.
 
 On the other hand if you want to train with the cropped dataset, donwload it from "https://github.com/henningheyen/Fruits-And-Vegetables-Detection-Dataset" and run the dataset_cleaner script.
 
